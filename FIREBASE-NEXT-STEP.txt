@@ -1,0 +1,20 @@
+LEXI – Firebase integration is not enabled in this first PWA package.
+
+Current build:
+- Preserves the supplied vocabulary learning HTML and its existing features.
+- Adds an installable PWA manifest, app icons, and a service worker for offline loading.
+- Learning progress still uses this browser/device's localStorage.
+
+Before email access control and cross-device cloud sync can be enabled:
+1. Create a Firebase project.
+2. Register a Web App in Project settings.
+3. Enable Firebase Authentication (Email link sign-in).
+4. Create a Cloud Firestore database.
+5. Supply the Firebase Web App configuration (NOT a service-account private key).
+6. Configure Firestore security rules so only the designated admin and explicitly approved emails can access the app data.
+
+Admin email requested by the owner: raidulislam281@gmail.com
+
+Security note:
+Do not put service-account credentials or private keys in this folder or in browser code.
+A client-side email check alone is not secure; authorization must be enforced by Firestore Security Rules.
